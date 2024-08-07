@@ -1,0 +1,36 @@
+﻿@model EntityLayer.Concrete.Testimonial
+@{
+    ViewData["Title"] = "EditTestimonail";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("EditTestimonail", "Testimonial", FormMethod.Post))
+{
+	@Html.HiddenFor(x=>x.TestimonialID)
+	<br />
+	@Html.Label("Yetenek Başlığı")
+	@Html.TextBoxFor(x=>x.ClientName,new { @class ="form-control" })
+	<br />
+	@Html.Label("Yetenek Başlığı")
+	@Html.TextBoxFor(x=>x.Title,new { @class ="form-control" })
+	<br />
+	@Html.Label("Değer")
+	@Html.TextBoxFor(x=>x.ImageUrl,new { @class ="form-control" })
+	<br />
+	@Html.Label("Yetenek Başlığı")
+	@Html.TextBoxFor(x=>x.Company,new { @class ="form-control" })
+	<br />
+	@Html.Label("Yetenek Başlığı")
+	@Html.TextAreaFor(x=>x.Comment,8,3,new { @class ="form-control" })
+	<br />
+	<button class="btn btn-success">Güncelle</button>
+}
+
+
+
+
+
+
+
+
+

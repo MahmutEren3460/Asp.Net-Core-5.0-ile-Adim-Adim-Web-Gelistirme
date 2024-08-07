@@ -1,0 +1,43 @@
+﻿@model EntityLayer.Concrete.Testimonial
+@{
+    ViewData["Title"] = "AddTestimonail";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("AddTestimonail", "Testimonial", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-description"> Yeni Deneyim Ekleme Sayfası </p>
+                <form class="forms-sample">
+                    <div class="form-group">
+                        <label>İsim</label>
+                        <input type="text" class="form-control" name="ClientName">
+                    </div>
+                    <div class="form-group">
+                        <label>Şirket</label>
+                        <input type="text" class="form-control" name="Company">
+                    </div>
+                    <div class="form-group">
+                        <label>Unvan</label>
+                        <input type="text" class="form-control" name="Title">
+                    </div>
+                    <div class="form-group">
+                        <label>Resim Yolu</label>
+                        <input type="text" class="form-control" name="ImageUrl">
+                    </div>
+                    <div class="form-group">
+                        <label>Yorum</label>
+                <textarea class="form-control" name="Comment" rows="6"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Yeni Referans ekle</button>
+                </form>
+            </div>
+        </div>
+    </div>
+}
+
+

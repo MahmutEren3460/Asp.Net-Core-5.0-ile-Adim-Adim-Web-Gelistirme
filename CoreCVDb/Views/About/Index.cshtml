@@ -1,0 +1,50 @@
+﻿@model EntityLayer.Concrete.About
+
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Index", "About", FormMethod.Post))
+{
+	<div class="col-12 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body">
+				<p class="card-description"> Öne Çıkan Düzenleme Sayfası </p>
+				<form class="forms-sample">
+					@Html.HiddenFor(x=>x.AboutID)
+					<div class="form-group">
+						@Html.Label("Başlık")
+						@Html.TextBoxFor(x=>x.Title,new { @class ="form-control" })
+					</div>
+					<div class="form-group">
+						@Html.Label("Açıklama")
+						@Html.TextBoxFor(x=>x.Description,new { @class ="form-control" })
+					</div>
+					<div class="form-group">
+						@Html.Label("Yaş")
+						@Html.TextBoxFor(x=>x.Age,new { @class ="form-control" })
+					</div>
+					<div class="form-group">
+						@Html.Label("Mail")
+						@Html.TextBoxFor(x=>x.Mail,new { @class ="form-control" })
+					</div>
+					<div class="form-group">
+						@Html.Label("Telefon")
+						@Html.TextBoxFor(x=>x.Phone,new { @class ="form-control" })
+					</div>
+					<div class="form-group">
+						@Html.Label("Adres")
+						@Html.TextBoxFor(x=>x.Address,new { @class ="form-control" })
+					</div>
+					<div class="form-group">
+						@Html.Label("Resim URL")
+						@Html.TextBoxFor(x=>x.ImageUrl,new { @class ="form-control" })
+					</div>
+					<button class="btn btn-success">Güncelle</button>
+				</form>
+			</div>
+		</div>
+	</div>
+}
+

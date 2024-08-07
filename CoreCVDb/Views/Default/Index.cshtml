@@ -1,0 +1,70 @@
+﻿@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<!-- upto 2 directory depth-->
+<html lang="tr">
+@await Html.PartialAsync("HeaderPartial")
+<body id="top">
+	@await Html.PartialAsync("NavbarPartial")
+	<div class="page-content">
+		<div id="content">
+			@await Component.InvokeAsync("FeatureList")
+
+			@await Component.InvokeAsync("AboutList")
+
+			@await Component.InvokeAsync("ServiceList")
+
+			@await Component.InvokeAsync("SkillList")
+
+			@await Component.InvokeAsync("PortfolioList")
+
+			@await Component.InvokeAsync("ExperienceList")
+
+			@await Component.InvokeAsync("TestimonialList")
+
+
+			<div class="section px-2 px-lg-4 pb-4 pt-5 mb-5" id="contact">
+				<div class="container-narrow">
+					<div class="text-center mb-5">
+						<h2 class="marker marker-center">İletişim</h2>
+					</div>
+					<div class="row">
+			@*@await Component.InvokeAsync("SendMessage")*@
+			@await Html.PartialAsync("/Views/Default/SendMessage.cshtml")
+
+			@await Component.InvokeAsync("ContactDetails")
+					</div>
+				</div>
+			</div>
+			<footer class="pt-4 pb-4 text-center bg-light">
+				<div class="container">
+					<div class="my-3">
+						<div class="h4">Mahmut Eren Yüce</div>
+						<p>Bilgisayar Programcısı & .Net Core Developer</p>
+						<div class="social-nav">
+							<nav role="navigation">
+								<ul class="nav justify-content-center">
+									@await Component.InvokeAsync("SocialMediaList")
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="text-small text-secondary">
+						<div class="mb-1">&copy; @DateTime.Now.Year Tüm hakları saklıdır.</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<div id="scrolltop"><a class="btn btn-secondary" href="#top"><span class="icon"><i class="fas fa-angle-up fa-x"></i></span></a></div>
+	<script src="~/Template/scripts/imagesloaded.pkgd.min.js?ver=1.2.0"></script>
+	<script src="~/Template/scripts/masonry.pkgd.min.js?ver=1.2.0"></script>
+	<script src="~/Template/scripts/BigPicture.min.js?ver=1.2.0"></script>
+	<script src="~/Template/scripts/purecounter.min.js?ver=1.2.0"></script>
+	<script src="~/Template/scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
+	<script src="~/Template/scripts/aos.min.js?ver=1.2.0"></script>
+	<script src="~/Template/scripts/main.js?ver=1.2.0"></script>
+</body>
+</html>

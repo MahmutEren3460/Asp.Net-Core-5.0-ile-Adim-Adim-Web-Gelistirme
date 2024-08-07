@@ -1,0 +1,42 @@
+﻿@model EntityLayer.Concrete.Portfolio
+@{
+	ViewData["Title"] = "AddPortfolio";
+	Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<div class="card-header border-0">
+	<h3 class="mb-0">Proje Ekleme Sayfası</h3>
+</div>
+@using (Html.BeginForm("AddPortfolio", "Portfolio", FormMethod.Post))
+{
+	<div class="col-12 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body">
+				<p class="card-description"> Proje Ekleme Sayfası </p>
+				<form class="forms-sample">
+					@Html.HiddenFor(x=>x.PortfolioID)
+					<br />
+					@Html.Label("Proje Başlığı")
+					@Html.TextBoxFor(x=>x.Name,new { @class ="form-control" })
+					@Html.ValidationMessageFor(x=>x.Name)
+					<br />
+					@Html.Label("Görsel 1")
+					@Html.TextBoxFor(x=>x.ImageUrl,new { @class ="form-control" })
+					@Html.ValidationMessageFor(x=>x.ImageUrl)
+					<br />
+					@Html.Label("Görsel 2")
+					@Html.TextBoxFor(x=>x.ImageUrl2,new { @class ="form-control" })
+					@Html.ValidationMessageFor(x=>x.ImageUrl2)
+					<br />
+					@Html.Label("Proje Linki")
+					@Html.TextBoxFor(x=>x.ProjectUrl,new { @class ="form-control" })
+					@Html.ValidationMessageFor(x=>x.ProjectUrl)
+					<br />
+					<button class="btn btn-outline-info">Yeni Deneyim ekle</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+}
+

@@ -1,0 +1,37 @@
+﻿@using EntityLayer.Concrete
+@model List<Skill>
+
+<div class="section px-3 px-lg-4 pt-5" id="skills">
+    <div class="container-narrow">
+        <div class="text-center mb-5">
+            <h2 class="marker marker-center">Yeteneklerim</h2>
+        </div>
+        <div class="bg-light p-3">
+            <div class="row">
+                @for (int i = 0; i < Model.Count; i += 2)
+                {
+                    <div class="col-md-5">
+                        <div class="py-1">
+                            <div class="d-flex text-small fw-bolder"><span class="me-auto">@Model[i].Title</span><span>@Model[i].Value%</span></div>
+                            <div class="progress my-1">
+                                <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor=".skills-section" style="width: @Model[i].Value%" aria-valuenow="@Model[i].Value" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @if (i + 1 < Model.Count)
+                    {
+                        <div class="col-md-5 offset-md-2">
+                            <div class="py-1">
+                                <div class="d-flex text-small fw-bolder"><span class="me-auto">@Model[i + 1].Title</span><span>@Model[i + 1].Value%</span></div>
+                                <div class="progress my-1">
+                                    <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="400" data-aos-anchor=".skills-section" style="width: @Model[i + 1].Value%" aria-valuenow="@Model[i + 1].Value" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>

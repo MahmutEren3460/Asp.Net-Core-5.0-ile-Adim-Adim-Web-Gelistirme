@@ -1,0 +1,34 @@
+﻿@using EntityLayer.Concrete
+@model List<Portfolio>
+<div class="col-md-6 col-xl-4 grid-margin stretch-card">
+	<div class="card">
+		<div class="card-body">
+			<h4 class="card-title">Proje Ekran Görüntüleri</h4>
+			<div class="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel" id="owl-carousel-basic">
+				@foreach(var item in Model){
+				<div class="item">
+					<img src="@item.ImageUrl" alt="" width="300" height="200">
+				</div>
+				}
+			</div>
+			<div class="d-flex py-4">
+				<div class="preview-list w-100">
+					<div class="preview-item p-0">
+						<div class="preview-thumbnail">
+							<img src="https://i.hizliresim.com/sr0fnzr.png" class="rounded-circle" alt="">
+						</div>
+						<div class="preview-item-content d-flex flex-grow">
+							<div class="flex-grow">
+								<div class="d-flex d-md-block d-xl-flex justify-content-between">
+									<h6 class="preview-subject">Mahmut Eren Yüce</h6>
+								</div>
+								<p class="text-muted">.Net developer & Computer Programer</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="text-muted">Projeye ait ekran alıntıları. </p>
+		</div>
+	</div>
+</div>

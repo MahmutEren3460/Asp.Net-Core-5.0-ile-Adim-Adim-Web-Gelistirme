@@ -1,0 +1,66 @@
+﻿@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Corona Admin</title>
+	<!-- plugins:css -->	<!-- endinject -->
+	<!-- Plugin css for this page -->
+	
+	<!-- End plugin css for this page -->
+	<!-- inject:css -->
+	<!-- endinject -->
+	<!-- Layout styles -->
+	<!-- End layout styles -->
+</head>
+<body>
+	@await Component.InvokeAsync("FeatureStatistic")
+	<div class="row">
+		<div class="col-md-4 grid-margin stretch-card">
+			<div class="card">
+				<div class="card-body">
+					<h4 class="card-title">Bütçe Geçmişi</h4>
+					<canvas id="transaction-history" class="transaction-chart"></canvas>
+					<div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+						<div class="text-md-center text-xl-left">
+							<h6 class="mb-1">Proje Ödemeleri</h6>
+							<p class="text-muted mb-0">07 Aralık 2019, 09:12</p>
+						</div>
+						<div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+							<h6 class="font-weight-bold mb-0">₺12450</h6>
+						</div>
+					</div>
+					<div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+						<div class="text-md-center text-xl-left">
+							<h6 class="mb-1">Reklam Gelirleri</h6>
+							<p class="text-muted mb-0">01 Aralık 2019, 09:26</p>
+						</div>
+						<div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+							<h6 class="font-weight-bold mb-0">₺1687</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		@await Component.InvokeAsync("Last5Projects")
+	</div>
+	@await Component.InvokeAsync("Statistics2")
+	@await Component.InvokeAsync("ProjectList")
+	<div class="row">
+		@await Component.InvokeAsync("MessageList")
+		@await Component.InvokeAsync("SlideList")
+		@await Component.InvokeAsync("ToDoListPanel")
+
+
+	</div>
+	@await Component.InvokeAsync("VisitorMap")
+
+	<!-- End custom js for this page -->
+</body>
+</html>

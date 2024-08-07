@@ -1,0 +1,105 @@
+﻿@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_WriteLayout.cshtml";
+}
+
+
+<div class="col-md-12 grid-margin">
+	<div class="row">
+		<div class="col-12 col-xl-8 mb-4 mb-xl-0">
+			<h3 class="font-weight-bold">Hoşgeldin @ViewBag.v</h3>
+			<h6 class="font-weight-normal mb-0">AspNet Core Yazar Dashboard Paneli! Yeni Duyurular İçin<span class="text-primary"><a href="/Writer/Default/Index/"> Hemen Tıklayın!</a></span></h6>
+		</div>
+		<div class="col-12 col-xl-4">
+			<div class="justify-content-end d-flex">
+				<div class="dropdown flex-md-grow-1 flex-xl-grow-0">
+					<label @*type="button"*@ id="dropdownMenuDate2">
+						@*<i class="mdi mdi-calendar"></i>*@ @DateTime.Now.ToShortDateString()
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="col-md-6 grid-margin stretch-card">
+	<div class="card tale-bg">
+		<div class="card-people mt-auto">
+			<img src="~/skydash/images/dashboard/people.svg" alt="people">
+			<div class="weather-info">
+				<div class="d-flex">
+					<div>
+						<h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>@ViewBag.v5<sup>C</sup></h2>
+						
+					</div>
+					<div class="ml-2">
+						<h4 class="location font-weight-normal">@ViewBag.v7</h4>
+						@*<h6 class="font-weight-normal">Türkiye</h6>*@
+						<h6 class="mb-0 font-weight-normal">@ViewBag.v6</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="col-md-6 grid-margin transparent">
+	<div class="row">
+		<div class="col-md-6 mb-4 stretch-card transparent">
+			<div class="card card-tale">
+				<div class="card-body">
+					<p class="mb-4">Gelen Mesaj Sayısı</p>
+					<p class="fs-30 mb-2">@ViewBag.v1</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 mb-4 stretch-card transparent">
+			<div class="card card-dark-blue">
+				<div class="card-body">
+					<p class="mb-4">Duyuru Sayısı</p>
+					<p class="fs-30 mb-2">@ViewBag.v2</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
+			<div class="card card-light-blue">
+				<div class="card-body">
+					<p class="mb-4">Giden Mesaj Sayısı</p>
+					<p class="fs-30 mb-2">@ViewBag.v3</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 stretch-card transparent">
+			<div class="card card-light-danger">
+				<div class="card-body">
+					<p class="mb-4">Toplam Yetenek Sayısı</p>
+					<p class="fs-30 mb-2">@ViewBag.v4</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body">
+				<p class="card-title">Yazar Paneli</p>
+				<p class="font-weight-500">Yazarlar için mesaj,duyuru,dashboard gibi bilgileri barındıran sayfadır.Yardıma ihtiyacınız olursa iletişim kısmından bize ulaşabilirsiniz. </p>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body">
+				<div class="d-flex justify-content-between">
+					<p class="card-title">Dashboard Sayfası</p>
+					@*<a href="#" class="text-info">View all</a>*@
+				</div>
+				<p class="font-weight-500">Projemizin yazar panelinde bazı istatiksel değerler ve hava durumu apisi üzerinden bulunduğun şehrin hava durumunu öğrenebilirsin.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
