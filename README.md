@@ -1,7 +1,7 @@
 Merhabalar bu bir CV projesidir.Bu proje kişi hakkında bilgiler edinebilirsiniz kişi ile iletişime geçebilirsiniz.
 Yazar paneline üye olarak diğer kullanıcılar ile iletşime geçebilirsiniz.Bu projede üç tane sayfa bulunmaktadır bunlar Ana sayfa,Yazar paneli ve Admin paneli bulunmaktadır.Ana sayfa kişi hakkıda bilgiler edinmemizi sağlıyor.
 Yazar paneli ise hem adminle hemde diğer kullanıcılar ile iletişme geçebilirsiniz.Admin panelinde ise sayfanın içeriği güncelleme yeni projeler,yetenekler vb. eklemeler yapmayı iletişim kısmından gelen mesajları görme ve cevap verme.
-Dashboard kısmında bütün sayfa hakkında özetleri görebilirsiniz.Bu projede kullandığım teknolojiler aşşağıdadır.
+Dashboard kısmında bütün sayfa hakkında özetleri görebilirsiniz.Bu projede kullandığım teknolojiler aşağıdadır.
 
 •AspNet Core 5.0
 
